@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,14 +8,20 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
+});
+
 export const metadata: Metadata = {
   title: "NORTH | AI-Powered Accounting Automation",
   description:
-    "Accounting that never loses direction. Automate receipts, reconciliation, and journal entries with AI agents.",
+    "Accounting that never loses direction. AI agents that handle the books so your team can focus on what matters.",
   openGraph: {
     title: "NORTH | AI-Powered Accounting Automation",
     description:
-      "Accounting that never loses direction. Automate receipts, reconciliation, and journal entries with AI agents.",
+      "Accounting that never loses direction. AI agents that handle the books so your team can focus on what matters.",
     type: "website",
   },
 };
@@ -26,7 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col font-[family-name:var(--font-inter)]">
         {children}
       </body>

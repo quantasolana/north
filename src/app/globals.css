@@ -20,28 +20,27 @@
 
   body {
     background-color: var(--charcoal-dark);
-    color: #ffffff;
+    color: var(--cream);
     font-family: var(--font-inter), system-ui, sans-serif;
   }
 }
 
 :root {
-  --charcoal: #1a1a2e;
-  --charcoal-light: #16213e;
-  --charcoal-dark: #0f0f1a;
-  --cyan: #00d4ff;
-  --cyan-dim: #00b8d9;
-  --cyan-glow: rgba(0, 212, 255, 0.15);
-  --cyan-muted: rgba(0, 212, 255, 0.1);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-cyan: rgba(0, 212, 255, 0.3);
-  --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --text-muted: rgba(255, 255, 255, 0.5);
-  --surface: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.06);
-  --glass: rgba(26, 26, 46, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.06);
+  --charcoal-dark: #1a1a1a;
+  --charcoal: #1e1e1e;
+  --charcoal-light: #242424;
+  --coral: #e8735a;
+  --coral-dim: #d4634b;
+  --coral-glow: rgba(232, 115, 90, 0.15);
+  --cream: #f0e6d8;
+  --cream-dim: rgba(240, 230, 216, 0.7);
+  --cream-muted: rgba(240, 230, 216, 0.4);
+  --border: rgba(240, 230, 216, 0.08);
+  --border-coral: rgba(232, 115, 90, 0.35);
+  --surface: rgba(240, 230, 216, 0.03);
+  --surface-hover: rgba(240, 230, 216, 0.06);
+  --glass: rgba(30, 28, 26, 0.7);
+  --glass-border: rgba(240, 230, 216, 0.06);
   --success: #22c55e;
   --warning: #f59e0b;
   --error: #ef4444;
@@ -50,4 +49,22 @@
 
 @theme inline {
   --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  animation: ticker 28s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
 }
