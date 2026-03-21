@@ -45,6 +45,14 @@
   --warning: #f59e0b;
   --error: #ef4444;
   --info: #3b82f6;
+
+  /* Dashboard aliases — map legacy cyan tokens to coral design */
+  --cyan: var(--coral);
+  --cyan-dim: var(--coral-dim);
+  --border-cyan: var(--border-coral);
+  --cyan-muted: var(--coral-glow);
+  --text-secondary: var(--cream-dim);
+  --text-muted: var(--cream-muted);
 }
 
 @theme inline {

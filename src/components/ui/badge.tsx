@@ -13,7 +13,7 @@ const badgeVariants = cva(
         error: "bg-red-500/10 text-red-400 border border-red-500/20",
         info: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
         default:
-          "bg-[var(--cyan-muted)] text-[var(--cyan)] border border-[var(--border-cyan)]",
+          "bg-[var(--coral-glow)] text-[var(--coral)] border border-[var(--border-coral)]",
       },
     },
     defaultVariants: {
