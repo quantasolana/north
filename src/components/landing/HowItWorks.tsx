@@ -33,22 +33,17 @@ export function HowItWorks() {
 
   useGSAP(
     () => {
-      gsap.from(".hiw-heading", {
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".hiw-heading", start: "top 85%" },
-      });
+      gsap.fromTo(
+        ".hiw-heading",
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: ".hiw-heading", start: "top 85%" } }
+      );
 
-      gsap.from(".hiw-step", {
-        y: 50,
-        opacity: 0,
-        duration: 0.75,
-        ease: "power3.out",
-        stagger: 0.18,
-        scrollTrigger: { trigger: ".hiw-step", start: "top 85%" },
-      });
+      gsap.fromTo(
+        ".hiw-step",
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.75, ease: "power3.out", stagger: 0.18, scrollTrigger: { trigger: ".hiw-step", start: "top 85%" } }
+      );
     },
     { scope: container }
   );

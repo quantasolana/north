@@ -41,28 +41,17 @@ export function FeatureCards() {
 
   useGSAP(
     () => {
-      gsap.from(".features-heading", {
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".features-heading",
-          start: "top 85%",
-        },
-      });
+      gsap.fromTo(
+        ".features-heading",
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: ".features-heading", start: "top 85%" } }
+      );
 
-      gsap.from(".feature-card", {
-        y: 60,
-        opacity: 0,
-        duration: 0.75,
-        ease: "power3.out",
-        stagger: 0.12,
-        scrollTrigger: {
-          trigger: ".feature-card",
-          start: "top 85%",
-        },
-      });
+      gsap.fromTo(
+        ".feature-card",
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.75, ease: "power3.out", stagger: 0.12, scrollTrigger: { trigger: ".feature-card", start: "top 85%" } }
+      );
     },
     { scope: container }
   );

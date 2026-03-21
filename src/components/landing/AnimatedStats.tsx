@@ -40,17 +40,11 @@ export function AnimatedStats() {
         });
       });
 
-      gsap.from(".stat-block", {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: ".stat-block",
-          start: "top 85%",
-        },
-      });
+      gsap.fromTo(
+        ".stat-block",
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.15, scrollTrigger: { trigger: ".stat-block", start: "top 85%" } }
+      );
     },
     { scope: container }
   );

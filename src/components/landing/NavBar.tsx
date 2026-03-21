@@ -20,12 +20,11 @@ export function NavBar() {
 
   useGSAP(
     () => {
-      gsap.from(container.current, {
-        y: -20,
-        opacity: 0,
-        duration: 0.7,
-        ease: "power3.out",
-      });
+      gsap.fromTo(
+        container.current,
+        { y: -20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }
+      );
     },
     { scope: container }
   );

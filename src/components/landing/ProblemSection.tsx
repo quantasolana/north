@@ -34,28 +34,17 @@ export function ProblemSection() {
 
   useGSAP(
     () => {
-      gsap.from(".problem-heading", {
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".problem-heading",
-          start: "top 85%",
-        },
-      });
+      gsap.fromTo(
+        ".problem-heading",
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: ".problem-heading", start: "top 85%" } }
+      );
 
-      gsap.from(".pain-card", {
-        y: 60,
-        opacity: 0,
-        duration: 0.75,
-        ease: "power3.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: ".pain-card",
-          start: "top 85%",
-        },
-      });
+      gsap.fromTo(
+        ".pain-card",
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.75, ease: "power3.out", stagger: 0.15, scrollTrigger: { trigger: ".pain-card", start: "top 85%" } }
+      );
     },
     { scope: container }
   );

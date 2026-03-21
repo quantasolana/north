@@ -66,22 +66,17 @@ export function PricingSection() {
 
   useGSAP(
     () => {
-      gsap.from(".pricing-heading", {
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".pricing-heading", start: "top 85%" },
-      });
+      gsap.fromTo(
+        ".pricing-heading",
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: ".pricing-heading", start: "top 85%" } }
+      );
 
-      gsap.from(".pricing-card", {
-        y: 60,
-        opacity: 0,
-        duration: 0.75,
-        ease: "power3.out",
-        stagger: 0.12,
-        scrollTrigger: { trigger: ".pricing-card", start: "top 85%" },
-      });
+      gsap.fromTo(
+        ".pricing-card",
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.75, ease: "power3.out", stagger: 0.12, scrollTrigger: { trigger: ".pricing-card", start: "top 85%" } }
+      );
     },
     { scope: container }
   );
@@ -193,8 +188,8 @@ export function PricingSection() {
                       }
                     : {
                         background: "transparent",
-                        color: "var(--cream-dim)",
-                        border: "1px solid var(--glass-border)",
+                        color: "var(--cream)",
+                        border: "1px solid var(--border)",
                       }
                 }
                 onMouseEnter={(e) => {
@@ -205,8 +200,8 @@ export function PricingSection() {
                 }}
                 onMouseLeave={(e) => {
                   if (!tier.isPopular) {
-                    e.currentTarget.style.borderColor = "var(--glass-border)";
-                    e.currentTarget.style.color = "var(--cream-dim)";
+                    e.currentTarget.style.borderColor = "var(--border)";
+                    e.currentTarget.style.color = "var(--cream)";
                   }
                 }}
               >

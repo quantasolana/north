@@ -93,25 +93,27 @@ export function HeroSection() {
     () => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      tl.from(".hero-word", {
-        y: 44,
-        opacity: 0,
-        duration: 0.75,
-        stagger: 0.07,
-      })
-        .from(
+      tl.fromTo(
+        ".hero-word",
+        { y: 44, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.75, stagger: 0.07 }
+      )
+        .fromTo(
           ".hero-sub",
-          { y: 24, opacity: 0, duration: 0.65 },
+          { y: 24, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.65 },
           "-=0.3"
         )
-        .from(
+        .fromTo(
           ".hero-cta",
-          { y: 20, opacity: 0, duration: 0.55, stagger: 0.1 },
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.55, stagger: 0.1 },
           "-=0.2"
         )
-        .from(
+        .fromTo(
           ".hero-proof",
-          { opacity: 0, duration: 0.5 },
+          { opacity: 0 },
+          { opacity: 1, duration: 0.5 },
           "-=0.1"
         );
     },

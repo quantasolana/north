@@ -13,13 +13,11 @@ export function CtaSection() {
 
   useGSAP(
     () => {
-      gsap.from(".cta-content", {
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".cta-content", start: "top 85%" },
-      });
+      gsap.fromTo(
+        ".cta-content",
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: ".cta-content", start: "top 85%" } }
+      );
     },
     { scope: container }
   );
