@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8735a"/>
+      <stop offset="100%" stop-color="#d4634b"/>
+    </linearGradient>
+    <linearGradient id="creamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0e6d8"/>
+      <stop offset="70%" stop-color="rgba(240,230,216,0.85)"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="nClip">
+      <path d="M 80 320 L 80 80 L 100 80 L 280 280 L 280 80 L 320 80 L 320 320 L 300 320 L 120 120 L 120 320 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" rx="48" fill="#1a1a1a"/>
+
+  <!-- Subtle border -->
+  <rect width="400" height="400" rx="48" fill="none" stroke="rgba(240,230,216,0.08)" stroke-width="1"/>
+
+  <!-- Dot grid background texture -->
+  <g opacity="0.06">
+    <circle cx="40" cy="40" r="2" fill="#f0e6d8"/>
+    <circle cx="80" cy="40" r="2" fill="#f0e6d8"/>
+    <circle cx="120" cy="40" r="2" fill="#f0e6d8"/>
+    <circle cx="160" cy="40" r="2" fill="#f0e6d8"/>
+    <circle cx="200" cy="40" r="2" fill="#f0e6d8"/>
+    <circle cx="240" cy="40" r="2" fill="#f0e6d8"/>
+    <circle cx="280" cy="40" r="2" fill="#f0e6d8"/>
+    <circle cx="320" cy="40" r="2" fill="#f0e6d8"/>
+    <circle cx="360" cy="40" r="2" fill="#f0e6d8"/>
+    <circle cx="40" cy="80" r="2" fill="#f0e6d8"/>
+    <circle cx="360" cy="80" r="2" fill="#f0e6d8"/>
+    <circle cx="40" cy="120" r="2" fill="#f0e6d8"/>
+    <circle cx="360" cy="120" r="2" fill="#f0e6d8"/>
+    <circle cx="40" cy="160" r="2" fill="#f0e6d8"/>
+    <circle cx="360" cy="160" r="2" fill="#f0e6d8"/>
+    <circle cx="40" cy="200" r="2" fill="#f0e6d8"/>
+    <circle cx="360" cy="200" r="2" fill="#f0e6d8"/>
+    <circle cx="40" cy="240" r="2" fill="#f0e6d8"/>
+    <circle cx="360" cy="240" r="2" fill="#f0e6d8"/>
+    <circle cx="40" cy="280" r="2" fill="#f0e6d8"/>
+    <circle cx="360" cy="280" r="2" fill="#f0e6d8"/>
+    <circle cx="40" cy="320" r="2" fill="#f0e6d8"/>
+    <circle cx="360" cy="320" r="2" fill="#f0e6d8"/>
+    <circle cx="40" cy="360" r="2" fill="#f0e6d8"/>
+    <circle cx="80" cy="360" r="2" fill="#f0e6d8"/>
+    <circle cx="120" cy="360" r="2" fill="#f0e6d8"/>
+    <circle cx="160" cy="360" r="2" fill="#f0e6d8"/>
+    <circle cx="200" cy="360" r="2" fill="#f0e6d8"/>
+    <circle cx="240" cy="360" r="2" fill="#f0e6d8"/>
+    <circle cx="280" cy="360" r="2" fill="#f0e6d8"/>
+    <circle cx="320" cy="360" r="2" fill="#f0e6d8"/>
+    <circle cx="360" cy="360" r="2" fill="#f0e6d8"/>
+  </g>
+
+  <!-- The N letterform — geometric, modern, premium -->
+  <path d="M 95 310 L 95 90 L 115 90 L 275 270 L 275 90 L 305 90 L 305 310 L 285 310 L 125 130 L 125 310 Z"
+        fill="url(#creamGrad)"/>
+
+  <!-- Coral compass accent — small dot at the top-right of N (like a north star) -->
+  <circle cx="305" cy="75" r="8" fill="url(#coralGrad)" filter="url(#glow)"/>
+
+  <!-- Subtle coral line accent at diagonal -->
+  <line x1="118" y1="95" x2="282" y2="265" stroke="#e8735a" stroke-width="1.5" opacity="0.2"/>
+</svg>

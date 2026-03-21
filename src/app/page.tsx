@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Compass, Check, Twitter, Linkedin, Github } from "lucide-react";
+import Image from "next/image";
+import { Check, Twitter, Linkedin, Github } from "lucide-react";
 import { NavBar } from "@/components/landing/NavBar";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { LogoTicker } from "@/components/landing/LogoTicker";
@@ -26,11 +27,13 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-14">
           <div className="col-span-2">
-            <div className="flex items-center gap-2.5 mb-4">
-              <Compass className="h-5 w-5 text-[var(--coral)]" />
-              <span className="text-base font-bold tracking-[0.18em] text-[var(--cream)]">
-                NORTH
-              </span>
+            <div className="mb-4">
+              <Image
+                src="/logo-mark.svg"
+                alt="North"
+                width={36}
+                height={36}
+              />
             </div>
             <p className="text-xs text-[var(--cream-muted)] leading-relaxed mb-6 max-w-[200px]">
               Accounting that never loses direction.

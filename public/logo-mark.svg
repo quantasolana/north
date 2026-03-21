@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="creamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0e6d8"/>
+      <stop offset="70%" stop-color="rgba(240,230,216,0.85)"/>
+    </linearGradient>
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8735a"/>
+      <stop offset="100%" stop-color="#d4634b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path d="M 95 310 L 95 90 L 115 90 L 275 270 L 275 90 L 305 90 L 305 310 L 285 310 L 125 130 L 125 310 Z"
+        fill="url(#creamGrad)"/>
+  <circle cx="305" cy="75" r="8" fill="url(#coralGrad)" filter="url(#glow)"/>
+</svg>

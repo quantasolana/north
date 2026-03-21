@@ -2,9 +2,10 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Compass, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 gsap.registerPlugin(useGSAP);
 
@@ -35,11 +36,14 @@ export function NavBar() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)] bg-[var(--charcoal-dark)]/85 backdrop-blur-xl"
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2.5">
-          <Compass className="h-6 w-6 text-[var(--coral)]" />
-          <span className="text-lg font-bold tracking-[0.18em] text-[var(--cream)]">
-            NORTH
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo-mark.svg"
+            alt="North"
+            width={40}
+            height={40}
+            priority
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
